@@ -214,14 +214,14 @@ if btag_algo=="deepcsv":
         }
 
 elif btag_algo=="deepflav":
-    btagSFSource = '%s/src/PhysicsTools/NanoAODTools/data/btagSF/DeepFlavour_94XSF_V4_B_F.csv' % os.getenv('CMSSW_BASE')
+    btagSFSource = '%s/src/PhysicsTools/NanoAODTools/data/btagSF/DeepFlavour_94XSF_V3_B_F.csv' % os.getenv('CMSSW_BASE')
     
     aliases['Jet_btagSF_deepflav_shape'] = {
         'linesToAdd': [
             'gSystem->Load("libCondFormatsBTauObjects.so");',
             'gSystem->Load("libCondToolsBTau.so");',
             'gSystem->AddIncludePath("-I%s/src");' % os.getenv('CMSSW_RELEASE_BASE'),
-            '.L %s/patches/btagsfpatch.cc+' % configurations
+            '.L %s/src/PlotsConfigurations/Configurations/patches/btagsfpatch.cc+' % os.getenv('CMSSW_BASE') 
         ],
         'class': 'BtagSF',
         'args': (btagSFSource,'central','deepjet'),
