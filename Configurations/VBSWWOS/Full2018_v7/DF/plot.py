@@ -104,21 +104,21 @@ groupPlot['VBS']  = {
 
 # keys here must match keys in samples.py    
 #                    
-plot['DY_lowZ']  = {  
+plot['DY']  = {  
                   'color': 418,    # kGreen+2
                   'isSignal' : 0,
                   'isData'   : 0, 
                   'scale'    : 1.0,
               }
 
-
+'''
 plot['DY_highZ']  = {  
                   'color': 418,    # kGreen+2
                   'isSignal' : 0,
                   'isData'   : 0, 
                   'scale'    : 1.0,
               }
-
+'''
 
 if useEmbeddedDY:
   plot['Dyemb']  = {  

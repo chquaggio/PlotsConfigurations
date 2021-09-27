@@ -9,7 +9,7 @@ structure['Zjj']  = {
                   'isSignal' : 0,
                   'isData'   : 0
               }
-
+'''
 structure['DY_lowZ']  = {  
                   'isSignal' : 0,
                   'isData'   : 0
@@ -19,7 +19,11 @@ structure['DY_highZ']  = {
                   'isSignal' : 0,
                   'isData'   : 0
               }
-
+'''
+structure['DY']  = {  
+                  'isSignal' : 0,
+                  'isData'   : 0
+              }
 structure['Dyemb']  = {
                   'isSignal' : 0,
                   'isData'   : 0

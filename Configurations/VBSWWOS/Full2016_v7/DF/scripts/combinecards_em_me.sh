@@ -1,15 +1,15 @@
 #!/bin/bash
 ## FIXME this is where the Combine framework is installed
-cd /afs/cern.ch/user/m/mlizzo/work/CMSSW_10_2_13
+cd /afs/cern.ch/user/c/cquaggio/workshop/CMSSW_10_2_13
 eval `scramv1 runtime -sh`
 cd -
 
 ## work directory
 workDir=$PWD
 
-datacardDir=datacards/AN_config
-combinedcardsDir=combinedcards/AN_config
-workspaceDir=workspaces/AN_config
+datacardDir=datacards
+combinedcardsDir=combinedcards
+workspaceDir=workspaces
 
 cd $workDir
 

@@ -1,14 +1,14 @@
 #!/bin/bash
 
 ## FIXME this is where the Combine framework is installed
-cd /afs/cern.ch/user/m/mlizzo/work/CMSSW_10_2_13
+cd /afs/cern.ch/user/c/cquaggio/workshop/CMSSW_10_2_13
 eval `scramv1 runtime -sh`
 cd -
 
 ## work directory
 #workDir=/afs/cern.ch/work/m/mlizzo/CMSSW_10_6_4/src/PlotsConfigurations/Configurations/VBS_OS/Full2018_v6/nAODv6_v6 
 workDir=$PWD
-workspaceDir=workspaces/AN_config
+workspaceDir=workspaces
 
 cd $workDir
 

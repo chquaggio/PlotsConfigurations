@@ -649,6 +649,7 @@ nuisances['QCDscale_top_1j']  = {
     }
 }
 
+'''
 nuisances['QCDscale_top_2j']  = {
     'name'  : 'QCDscale_top_2j',
     'skipCMS' : 1,
@@ -659,7 +660,6 @@ nuisances['QCDscale_top_2j']  = {
        'top' : topvars2j,
     }
 }
-
 
 nuisances['QCDscale_V'] = {
     'name': 'QCDscale_V',
@@ -680,7 +680,7 @@ nuisances['QCDscale_VV'] = {
         'VgS': variations
     }
 }
-
+'''
 
 # ggww and interference
 nuisances['QCDscale_ggVV'] = {
@@ -889,6 +889,7 @@ nuisances['QCDscale_ttH'] = {
     },
     'type': 'lnN',
 }
+
 '''
 nuisances['QCDscale_WWewk'] = {
     'name': 'QCDscale_WWewk',
@@ -897,7 +898,7 @@ nuisances['QCDscale_WWewk'] = {
     },
     'type': 'lnN'
 }
-'''
+
 nuisances['QCDscale_WWewk'] = {
     'name': 'QCDscale_WWewk',
     'kind': 'weight_envelope',
@@ -906,6 +907,7 @@ nuisances['QCDscale_WWewk'] = {
         'WWewk': VBSvariations
     }
 }
+'''
 
 nuisances['QCDscale_qqbar_ACCEPT'] = {
     'name': 'QCDscale_qqbar_ACCEPT',

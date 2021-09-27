@@ -454,6 +454,7 @@ for var in variations:
   WWvars2j.append(var+'/'+str(WWScaleNormFactors2j[var]))
 
 ## QCD scale nuisances for top are decorrelated for each RECO jet bin: the QCD scale is different for different jet multiplicities so it doesn't make sense to correlate them
+'''
 nuisances['QCDscale_top_2j']  = {
     'name'  : 'QCDscale_top_2j',
     'skipCMS' : 1,
@@ -495,7 +496,7 @@ nuisances['QCDscale_VV'] = {
         'VgS': variations
     }
 }
-
+'''
 nuisances['QCDscale_ggVV'] = {
     'name': 'QCDscale_ggVV',
     'type': 'lnN',
@@ -505,6 +506,7 @@ nuisances['QCDscale_ggVV'] = {
 }
 
 ##### Renormalization & factorization scales
+'''
 nuisances['QCDscale_WWewk'] = {
     'name': 'QCDscale_WWewk',
     'kind': 'weight_envelope',
@@ -513,7 +515,7 @@ nuisances['QCDscale_WWewk'] = {
         'WWewk': VBSvariations
     }
 }
-'''
+
 nuisances['WWresum2j']  = {
   'name'  : 'CMS_hww_WWresum_2j',
   'skipCMS' : 1,
