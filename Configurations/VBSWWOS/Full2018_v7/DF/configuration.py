@@ -27,10 +27,10 @@ lumi = 59.74
 
 # used by mkPlot to define output directory for plots
 # different from "outputDir" to do things more tidy
-outputDirPlots = 'plots'
+outputDirPlots = '/afs/cern.ch/user/c/cquaggio/private/Analysis/VBSWWOS_18_DF/plots'
 
 # used by mkDatacards to define output directory for datacards
-outputDirDatacard = 'datacards'
+outputDirDatacard = '/afs/cern.ch/user/c/cquaggio/private/Analysis/VBSWWOS_18_DF/datacards'
 
 # structure file for datacard
 structureFile = 'structure.py'
