@@ -8,6 +8,13 @@
 # If not defined, normal plots is used
 #
 
+groupPlot['VBS']  = {
+                  'nameHR' : 'VBS',
+                  'isSignal' : 2,
+                  'color': 888, #666,
+                  'samples'  : ['WWewk', 'cW_linear', 'cW_quadratic']
+              }
+              
 groupPlot['Zjj']  = {  
                   'nameHR': 'Zjj',
                   'isSignal' : 0,
@@ -89,12 +96,7 @@ groupPlot['VgS']  = {
               }
 '''
 
-groupPlot['VBS']  = {
-                  'nameHR' : 'VBS',
-                  'isSignal' : 2,
-                  'color': 888, #666,
-                  'samples'  : ['WWewk', 'cW_linear', 'cW_quadratic']
-              }
+
 
 
 

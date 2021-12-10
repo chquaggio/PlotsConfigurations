@@ -2,7 +2,7 @@
 
 treeName = 'Events'
 
-tag = 'OSWWEFT_2018'
+tag = 'OSWW_SM_official_vs_private'
 
 # used by mkShape to define output directory for root files
 outputDir = 'rootFiles_'+ tag
