@@ -2,10 +2,10 @@
 
 treeName = 'Events'
 
-tag = 'vbs_2018'
+tag = 'OSWWEFT_2018_SF'
 
 # used by mkShape to define output directory for root files
-outputDir = 'rootFile'
+outputDir = 'rootFiles_'+ tag
 
 # file with TTree aliases
 aliasesFile = 'aliases.py'
@@ -27,10 +27,10 @@ lumi = 59.74
 
 # used by mkPlot to define output directory for plots
 # different from "outputDir" to do things more tidy
-outputDirPlots = '/eos/user/c/cquaggio/Analysis/VBSWWOS_18_DF/plots'
+outputDirPlots = '/eos/user/c/cquaggio/Analysis/OSWW_EFT/plots/' + tag
 
 # used by mkDatacards to define output directory for datacards
-outputDirDatacard = '/afs/cern.ch/user/c/cquaggio/private/Analysis/VBSWWOS_18_DF/datacards'
+outputDirDatacard = '/eos/user/c/cquaggio/Analysis/OSWW_EFT/datacards/' + tag
 
 # structure file for datacard
 structureFile = 'structure.py'

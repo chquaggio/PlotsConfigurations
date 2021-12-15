@@ -8,16 +8,6 @@
 # If not defined, normal plots is used
 #
 
-
-groupPlot['VBS']  = {
-                  'nameHR' : 'VBS',
-                  'isSignal' : 2,
-                  'color': 888, #666,
-                  'samples'  : ['WWewk', 'WWewk_private']
-              }
-
-
-
 #plot = {}
 
 # keys here must match keys in samples.py    
@@ -25,14 +15,14 @@ groupPlot['VBS']  = {
 
 plot['WWewk']  = {
                   'color': 851, # kAzure -9 
-                  'isSignal' : 1,
+                  'isSignal' : 0,
                   'isData'   : 0,
                   #'scale'    : 1.0   # ele/mu trigger efficiency   datadriven
                   }
 
 plot['WWewk_private']  = {
-                  'color': 852, # kAzure -9 
-                  'isSignal' : 1,
+                  'color': 632, # kAzure -9 
+                  'isSignal' : 0,
                   'isData'   : 0,
                   #'scale'    : 1.0   # ele/mu trigger efficiency   datadriven
                   }

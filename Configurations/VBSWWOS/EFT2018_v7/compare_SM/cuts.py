@@ -39,12 +39,9 @@ cuts['DY']  = {
    'expr' : 'dycr',
    # Define the sub-categorization of dycr
    'categories' : { 
-      '2j'     : 'multiJet && (Lepton_pdgId[0]*Lepton_pdgId[1] == -11*11 || Lepton_pdgId[0]*Lepton_pdgId[1] == -13*13)', 
-      # '2j_em_me'     : 'multiJet && (Lepton_pdgId[0]*Lepton_pdgId[1] == -11*13) && mll>50 && mll<80',
-      # '2j_ee' : 'mll>120 && multiJet && (Lepton_pdgId[0]*Lepton_pdgId[1] == -11*11)',
-      # '2j_mm' : 'mll>120 && multiJet && (Lepton_pdgId[0]*Lepton_pdgId[1] == -13*13)', 
-#      '2j_em_me_lowZ'     : 'multiJet && (Lepton_pdgId[0]*Lepton_pdgId[1] == -11*13) && mll>50 && mll<80 && 0.5*abs((Lepton_eta[0]+Lepton_eta[1])-(CleanJet_eta[0]+CleanJet_eta[1]))<1', 
-#      '2j_em_me_highZ'     : 'multiJet && (Lepton_pdgId[0]*Lepton_pdgId[1] == -11*13) && mll>50 && mll<80 && 0.5*abs((Lepton_eta[0]+Lepton_eta[1])-(CleanJet_eta[0]+CleanJet_eta[1]))>1', 
+      '2j_em_me'     : 'multiJet && (Lepton_pdgId[0]*Lepton_pdgId[1] == -11*13) && mll>50 && mll<80',
+      '2j_ee' : 'multiJet && (Lepton_pdgId[0]*Lepton_pdgId[1] == -11*11)',
+      '2j_mm' : 'multiJet && (Lepton_pdgId[0]*Lepton_pdgId[1] == -13*13)', 
       }
 }
 
