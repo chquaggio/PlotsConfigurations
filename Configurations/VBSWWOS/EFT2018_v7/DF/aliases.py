@@ -330,6 +330,52 @@ aliases['SFweight'] = {
     'samples': mc
 }
 
+#################################
+#################################
+###### Reweighting factors ######
+#################################
+#################################
+
+aliases['rwgt_cHl3_LI'] = {
+    'expr' : '0.5*(LHEReweightingWeight[2] - LHEReweightingWeight[1])'
+}
+
+aliases['rwgt_cHl3_QU'] = {
+    'expr' : '0.5*(LHEReweightingWeight[2] + LHEReweightingWeight[1] - 2*LHEReweightingWeight[0])'
+}
+
+aliases['rwgt_cHq3_LI'] = {
+    'expr' : '0.5*(LHEReweightingWeight[4] - LHEReweightingWeight[3])'
+}
+
+aliases['rwgt_cHq3_QU'] = {
+    'expr' : '0.5*(LHEReweightingWeight[4] + LHEReweightingWeight[3] - 2*LHEReweightingWeight[0])'
+}
+
+aliases['rwgt_cqq31_LI'] = {
+    'expr' : '0.5*(LHEReweightingWeight[6] - LHEReweightingWeight[5])'
+}
+
+aliases['rwgt_cqq31_QU'] = {
+    'expr' : '0.5*(LHEReweightingWeight[6] + LHEReweightingWeight[5] - 2*LHEReweightingWeight[0])'
+}
+
+aliases['rwgt_cqq3_LI'] = {
+    'expr' : '0.5*(LHEReweightingWeight[8] - LHEReweightingWeight[7])'
+}
+
+aliases['rwgt_cqq3_QU'] = {
+    'expr' : '0.5*(LHEReweightingWeight[8] + LHEReweightingWeight[7] - 2*LHEReweightingWeight[0])'
+}
+
+aliases['rwgt_cll1_LI'] = {
+    'expr' : '0.5*(LHEReweightingWeight[10] - LHEReweightingWeight[9])'
+}
+
+aliases['rwgt_cll1_QU'] = {
+    'expr' : '0.5*(LHEReweightingWeight[10] + LHEReweightingWeight[9] - 2*LHEReweightingWeight[0])'
+}
+
 # Muon ttHMVA SF needed for tau embedded samples
 aliases['Muon_ttHMVA_SF'] = {
     'expr': '( (abs(Lepton_pdgId[0]) == 13)*(Lepton_tightMuon_cut_Tight_HWWW_tthmva_80_IdIsoSF[0]/Lepton_tightMuon_cut_Tight_HWWW_IdIsoSF[0])+(abs(Lepton_pdgId[0]) == 11) )*( (abs(Lepton_pdgId[1]) == 13)*(Lepton_tightMuon_cut_Tight_HWWW_tthmva_80_IdIsoSF[1]/Lepton_tightMuon_cut_Tight_HWWW_IdIsoSF[1])+ (abs(Lepton_pdgId[1]) == 11) )',

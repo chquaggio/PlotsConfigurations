@@ -79,7 +79,7 @@ structure['WW']  = {
                   'isData'   : 0    
                   }
 
-structure['WWewk']  = {
+structure['sm']  = {
                   'isSignal' : 1,
                   'isData'   : 0
                   }
@@ -216,16 +216,20 @@ structure['H_htt'] = {
                   'isData'   : 0    
                   }
                   
-structure['cW_linear'] = {
+# structure['lin_cW'] = {
+#                   'isSignal' : 1,
+#                   'isData'   : 0    
+#                   }
+
+# structure['quad_cW'] = {
+#                   'isSignal' : 1,
+#                   'isData'   : 0    
+#                   }
+
+structure['OSWW_5ops'] = {
                   'isSignal' : 1,
                   'isData'   : 0    
                   }
-
-structure['cW_quadratic'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
 
 # data
 

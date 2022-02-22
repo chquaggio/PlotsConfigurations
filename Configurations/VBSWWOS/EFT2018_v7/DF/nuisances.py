@@ -28,7 +28,7 @@ except NameError:
 from LatinoAnalysis.Tools.HiggsXSection import HiggsXSection
 HiggsXS = HiggsXSection()
 
-
+osww = ['OSWW_5ops', 'OSWW_cqq3_LI', 'OSWW_cqq3_QU', 'OSWW_cqq31_LI', 'OSWW_cqq31_QU', 'OSWW_cHl3_LI', 'OSWW_cHl3_QU', 'OSWW_cHq3_LI', 'OSWW_cHq3_QU', 'OSWW_cll1_LI', 'OSWW_cll1_QU']
 cuts0j = []
 cuts1j = []
 cuts2j = []
@@ -172,7 +172,7 @@ nuisances['electronpt'] = {
     'type': 'shape',
     'mapUp': 'ElepTup',
     'mapDown': 'ElepTdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['cW_linear', 'cW_quadratic']),
+    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in osww),
     'folderUp': makeMCDirectory('ElepTup_suffix'),
     'folderDown': makeMCDirectory('ElepTdo_suffix'),
     'AsLnN': '1'
@@ -207,7 +207,7 @@ nuisances['muonpt'] = {
     'type': 'shape',
     'mapUp': 'MupTup',
     'mapDown': 'MupTdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['cW_linear', 'cW_quadratic']),
+    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in osww),
     'folderUp': makeMCDirectory('MupTup_suffix'),
     'folderDown': makeMCDirectory('MupTdo_suffix'),
     'AsLnN': '1'
@@ -255,7 +255,7 @@ for js in jes_systs:
       'type': 'shape',
       'mapUp': js+'up',
       'mapDown': js+'do',
-      'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['VZ', 'Vg', 'VgS', 'cW_linear', 'cW_quadratic']),
+      'samples': dict((skey, ['1', '1']) for skey in mc if skey not in (['VZ', 'Vg', 'VgS'] + osww)),
       'folderUp': folderup,
       'folderDown': folderdo,
       'AsLnN': '1'
@@ -268,7 +268,7 @@ nuisances['JER'] = {
     'type': 'shape',
     'mapUp': 'JERup',
     'mapDown': 'JERdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['VZ', 'Vg', 'VgS', 'cW_linear', 'cW_quadratic']),
+    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in (['VZ', 'Vg', 'VgS'] + osww)),
     'folderUp': makeMCDirectory('JERup_suffix'),
     'folderDown': makeMCDirectory('JERdo_suffix'),
     'AsLnN': '1'
@@ -282,7 +282,7 @@ nuisances['met'] = {
     'type': 'shape',
     'mapUp': 'METup',
     'mapDown': 'METdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['cW_linear', 'cW_quadratic']),
+    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in osww),
     'folderUp': makeMCDirectory('METup_suffix'),
     'folderDown': makeMCDirectory('METdo_suffix'),
     'AsLnN': '1'
@@ -375,14 +375,14 @@ nuisances['PS_ISR']  = {
     'name': 'PS_ISR',
     'kind': 'weight',
     'type': 'shape',
-    'samples': dict((skey, ['PSWeight[2]', 'PSWeight[0]']) for skey in mc if skey not in ['Vg','VgS','WWewk']), #PSWeights are buggy for some samples, we add them back by hand below
+    'samples': dict((skey, ['PSWeight[2]', 'PSWeight[0]']) for skey in mc if skey not in ['Vg','VgS','sm']), #PSWeights are buggy for some samples, we add them back by hand below
 }
 
 nuisances['PS_FSR']  = {
     'name': 'PS_FSR',
     'kind': 'weight',
     'type': 'shape',
-    'samples': dict((skey, ['PSWeight[3]', 'PSWeight[1]']) for skey in mc if skey not in ['Vg','VgS','WWewk']), #PSWeights are buggy for some samples, we add them back by hand below
+    'samples': dict((skey, ['PSWeight[3]', 'PSWeight[1]']) for skey in mc if skey not in ['Vg','VgS','sm']), #PSWeights are buggy for some samples, we add them back by hand below
 }
 
 ## PS nuisances computed by hand as a function of nCleanGenJets using alternative samples (when available). Needed if nominal samples have buggy PSWeights
@@ -863,20 +863,20 @@ nuisances['QCDscale_ttH'] = {
 }
 
 '''
-nuisances['QCDscale_WWewk'] = {
-    'name': 'QCDscale_WWewk',
+nuisances['QCDscale_sm'] = {
+    'name': 'QCDscale_sm',
     'samples': {
-        'WWewk': '1.11',
+        'sm': '1.11',
     },
     'type': 'lnN'
 }
 
-nuisances['QCDscale_WWewk'] = {
-    'name': 'QCDscale_WWewk',
+nuisances['QCDscale_sm'] = {
+    'name': 'QCDscale_sm',
     'kind': 'weight_envelope',
     'type': 'shape',
     'samples': {
-        'WWewk': VBSvariations
+        'sm': VBSvariations
     }
 }
 '''

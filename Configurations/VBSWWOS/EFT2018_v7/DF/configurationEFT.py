@@ -17,7 +17,7 @@ variablesFile = 'variables.py'
 cutsFile = 'cuts.py' 
 
 # file with list of samples
-samplesFile = 'samples.py' 
+samplesFile = 'samplesEFT.py' 
 
 # file with list of samples
 plotFile = 'plotEFT.py' 
@@ -37,3 +37,4 @@ structureFile = 'structure.py'
 
 # nuisances file for mkDatacards and for mkShape
 nuisancesFile = 'nuisances.py'
+

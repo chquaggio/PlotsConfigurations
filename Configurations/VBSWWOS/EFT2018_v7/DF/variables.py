@@ -50,10 +50,16 @@ variables['mll']  = {   'name': 'mll',            #   variable name
                         'fold' :3
                         }
 
-variables['mjj']  = {   'name': 'mjj',            #   variable name    
-                        'range' : (10,500,3000),    #   variable range
+variables['mjj']  = {   'name'  : 'mjj',            #   variable name    
+                        'range' : ([500, 750., 1000., 1500., 2000., 3000],),    #   variable range
                         'xaxis' : 'm_{jj} [GeV]',  #   x axis name
-                        'fold' :3
+                        'fold'  : 3,
+                        # 'blind' : {
+                        #     'VBS_2j_em_me_lowZ' : [1800,3000],
+                        #     'VBS_2j_em_me_highZ' : [1800,3000],
+                        #     'top_2j_em_me' : [1800,3000],
+                        #     'dycr_2j_em_me' : [1800,3000],
+                        #   }
                         }
 
 # variables['mjj_5bin']  = {   'name': 'mjj',            #   variable name    
@@ -87,8 +93,14 @@ variables['Zepp_2l']  = {  'name': 'Lepton_eta[1]-0.5*(CleanJet_eta[0]+CleanJet_
                            'fold' :0
                            }
 
-variables['Zepp_ll']  = {   'name': '0.5*abs((Lepton_eta[0]+Lepton_eta[1])-(CleanJet_eta[0]+CleanJet_eta[1]))',            #   variable name    
-                           'range' : (10,0,5),    #   variable range
+variables['Zepp_ll_high']  = {   'name': '0.5*abs((Lepton_eta[0]+Lepton_eta[1])-(CleanJet_eta[0]+CleanJet_eta[1]))',            #   variable name    
+                           'range' : (8,1,5),    #   variable range
+                           'xaxis' : 'Z_{ll}',  #   x axis name
+                           'fold' :0
+                           }
+
+variables['Zepp_ll_low']  = {   'name': '0.5*abs((Lepton_eta[0]+Lepton_eta[1])-(CleanJet_eta[0]+CleanJet_eta[1]))',            #   variable name    
+                           'range' : (8,-1,1),    #   variable range
                            'xaxis' : 'Z_{ll}',  #   x axis name
                            'fold' :0
                            }
