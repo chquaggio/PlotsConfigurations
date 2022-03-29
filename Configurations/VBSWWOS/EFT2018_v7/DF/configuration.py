@@ -2,7 +2,7 @@
 
 treeName = 'Events'
 
-tag = 'OSWWEFT_2018_DF_cHq3'
+tag = 'OSWWEFT_2018_DF'
 
 # used by mkShape to define output directory for root files
 outputDir = 'rootFiles_'+ tag
@@ -17,7 +17,7 @@ variablesFile = 'variables.py'
 cutsFile = 'cuts.py' 
 
 # file with list of samples
-samplesFile = 'samples.py' 
+samplesFile = 'samplesEFT.py' 
 
 # file with list of samples
 plotFile = 'plotEFT.py' 

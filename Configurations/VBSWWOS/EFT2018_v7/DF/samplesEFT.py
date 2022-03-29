@@ -224,7 +224,7 @@ if useEmbeddedDY:
 # }
 
 
-samples['sm'] = {
+samples['WWewk'] = {
     'name': nanoGetSampleFiles(mcDirectory, 'WpWmJJ_EWK_noTop_dipoleRecoil_private'),
     'weight': mcCommonWeight + '*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)', #filter tops and Higgs
     'FilesPerJob': 4
@@ -437,7 +437,7 @@ files = nanoGetSampleFiles(EftDirectory, 'OSWW_DF_5ops')
 #     'FilesPerJob': 1
 # }
 
-samples['sm_private'] = {
+samples['sm'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_sm',    # factor for cross section normalization
     'FilesPerJob': 1
