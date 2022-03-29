@@ -79,10 +79,10 @@ structure['WW']  = {
                   'isData'   : 0    
                   }
 
-structure['sm']  = {
-                  'isSignal' : 1,
-                  'isData'   : 0
-                  }
+# structure['WWewk']  = {
+#                   'isSignal' : 0,
+#                   'isData'   : 0
+#                   }
 
 structure['ggWW']  = {
                   'isSignal' : 0,
@@ -216,21 +216,74 @@ structure['H_htt'] = {
                   'isData'   : 0    
                   }
                   
-# structure['lin_cW'] = {
-#                   'isSignal' : 1,
-#                   'isData'   : 0    
-#                   }
-
-# structure['quad_cW'] = {
-#                   'isSignal' : 1,
-#                   'isData'   : 0    
-#                   }
+#---------------------------------------
+#------------------EFT------------------
+#---------------------------------------
 
 structure['OSWW_5ops'] = {
                   'isSignal' : 1,
                   'isData'   : 0    
                   }
 
+structure['sm'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['sm_private'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['lin_cqq31'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['quad_cqq31'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['lin_cqq3'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['quad_cqq3'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['lin_cHq3'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['quad_cHq3'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['lin_cHl3'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['quad_cHl3'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['lin_cll1'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
+
+structure['quad_cll1'] = {
+                  'isSignal' : 1,
+                  'isData'   : 0    
+                  }
 # data
 
 

@@ -12,7 +12,7 @@ supercut = '   mll>50 \
             && Alt$(CleanJet_pt[0],0.)>30 && Alt$(CleanJet_pt[1],0.)>30 \
            '
 
-##signal region
+#signal region
 cuts['VBS'] = {
    'expr': 'sr',
    'categories' : {
@@ -20,6 +20,13 @@ cuts['VBS'] = {
       '2j_em_me_highZ'  : 'Zeppll_al >=1',
     }
 }    
+
+# cuts['VBS'] = {
+#    'expr': 'sr',
+#    'categories' : {
+#       '2j_em_me'   : 'bVeto', 
+#     }
+# }
 
 # Top control region
 cuts['top']  = {
@@ -33,6 +40,6 @@ cuts['top']  = {
 cuts['dycr'] = {
    'expr': 'dycr',
    'categories' : {
-      '2j_em_me'   : 'mll < 80 && multiJet', 
+      '2j_em_me'   : 'multiJet', 
     }
 }

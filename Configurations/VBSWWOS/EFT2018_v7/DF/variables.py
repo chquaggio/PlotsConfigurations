@@ -39,21 +39,21 @@ variables['mth']  = {   'name': 'mth',            #   variable name
                         }
 '''
 variables['ptll']  = {   'name': 'ptll',            #   variable name    
-                        'range' : (20,30,400),    #   variable range
+                        'range' : (10,30,400),    #   variable range
                         'xaxis' : 'pT_{ll} [GeV]',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 variables['mll']  = {   'name': 'mll',            #   variable name    
-                        'range' : (20,50,400),    #   variable range
+                        'range' : (10,50,400),    #   variable range
                         'xaxis' : 'm_{ll} [GeV]',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 variables['mjj']  = {   'name'  : 'mjj',            #   variable name    
                         'range' : ([500, 750., 1000., 1500., 2000., 3000],),    #   variable range
                         'xaxis' : 'm_{jj} [GeV]',  #   x axis name
-                        'fold'  : 3,
+                        'fold'  : 0,
                         # 'blind' : {
                         #     'VBS_2j_em_me_lowZ' : [1800,3000],
                         #     'VBS_2j_em_me_highZ' : [1800,3000],
@@ -75,9 +75,9 @@ variables['mjj']  = {   'name'  : 'mjj',            #   variable name
 #                         }
 
 variables['detajj']  = {   'name': 'detajj',            #   variable name    
-                           'range' : (10,3.5,8.5),    #   variable range
+                           'range' : (10,2.5,8.5),    #   variable range
                            'xaxis' : '#Delta #eta jj',  #   x axis name
-                           'fold' :0
+                           'fold' : 0
                            }
 
 
@@ -93,17 +93,17 @@ variables['Zepp_2l']  = {  'name': 'Lepton_eta[1]-0.5*(CleanJet_eta[0]+CleanJet_
                            'fold' :0
                            }
 
-variables['Zepp_ll_high']  = {   'name': '0.5*abs((Lepton_eta[0]+Lepton_eta[1])-(CleanJet_eta[0]+CleanJet_eta[1]))',            #   variable name    
-                           'range' : (8,1,5),    #   variable range
-                           'xaxis' : 'Z_{ll}',  #   x axis name
-                           'fold' :0
-                           }
+# variables['Zepp_ll_high']  = {   'name': '0.5*abs((Lepton_eta[0]+Lepton_eta[1])-(CleanJet_eta[0]+CleanJet_eta[1]))',            #   variable name    
+#                            'range' : (8,1,5),    #   variable range
+#                            'xaxis' : 'Z_{ll}',  #   x axis name
+#                            'fold' :0
+#                            }
 
-variables['Zepp_ll_low']  = {   'name': '0.5*abs((Lepton_eta[0]+Lepton_eta[1])-(CleanJet_eta[0]+CleanJet_eta[1]))',            #   variable name    
-                           'range' : (8,-1,1),    #   variable range
-                           'xaxis' : 'Z_{ll}',  #   x axis name
-                           'fold' :0
-                           }
+# variables['Zepp_ll_low']  = {   'name': '0.5*abs((Lepton_eta[0]+Lepton_eta[1])-(CleanJet_eta[0]+CleanJet_eta[1]))',            #   variable name    
+#                            'range' : (8,-1,1),    #   variable range
+#                            'xaxis' : 'Z_{ll}',  #   x axis name
+#                            'fold' :0
+#                            }
 '''
 variables['dphill']  = {   'name': 'dphill',            #   variable name    
                            'range' : (30,0,3.2),    #   variable range
@@ -114,32 +114,32 @@ variables['dphill']  = {   'name': 'dphill',            #   variable name
 variables['pt_1l']  = {   'name': 'Lepton_pt[0]',            #   variable name    
                         'range' : (20,0,200),    #   variable range
                         'xaxis' : 'pT 1st lepton [GeV]',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 variables['pt_2l']  = {   'name': 'Lepton_pt[1]',            #   variable name    
                         'range' : (20,0,200),    #   variable range
                         'xaxis' : 'pT 2nd lepton [GeV]',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 variables['eta_1l']  = {   'name': 'Lepton_eta[0]',            #   variable name    
                         'range' : (10,-5,5),    #   variable range
                         'xaxis' : '#eta 1st lepton',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 variables['eta_2l']  = {   'name': 'Lepton_eta[1]',            #   variable name    
                         'range' : (10,-5,5),    #   variable range
                         'xaxis' : '#eta 2nd lepton',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 
 variables['PuppiMET_pt']  = {   'name': 'PuppiMET_pt',            #   variable name    
-                        'range' : (25,0,250),    #   variable range
+                        'range' : (20,0,300),    #   variable range
                         'xaxis' : 'MET [GeV]',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 
@@ -152,13 +152,13 @@ variables['PuppiMET_pt']  = {   'name': 'PuppiMET_pt',            #   variable n
 variables['pt_1j']  = {   'name': 'CleanJet_pt[0]',            #   variable name    
                         'range' : (20,0,300),    #   variable range
                         'xaxis' : 'pT 1st jet [GeV]',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 variables['pt_2j']  = {   'name': 'CleanJet_pt[1]',            #   variable name    
                         'range' : (20,0,300),    #   variable range
                         'xaxis' : 'pT 2nd jet [GeV]',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 # variables['pt_3j']  = {   'name': 'Alt$(CleanJet_pt[2], 0)',            #   variable name    
@@ -170,13 +170,13 @@ variables['pt_2j']  = {   'name': 'CleanJet_pt[1]',            #   variable name
 variables['eta_1j']  = {   'name': 'CleanJet_eta[0]',            #   variable name    
                         'range' : ([-4.7, -4.2, -3.7, -3.2, -2.85, -2.5, -2., -1.5, -1., -0.5, 0, 0.5, 1., 1.5, 2., 2.5, 2.85, 3.2, 3.7, 4.2, 4.7],),    #   variable range
                         'xaxis' : '#eta 1st jet',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 variables['eta_2j']  = {   'name': 'CleanJet_eta[1]',            #   variable name    
                         'range' : ([-4.7, -4.2, -3.7, -3.2, -2.85, -2.5, -2., -1.5, -1., -0.5, 0, 0.5, 1., 1.5, 2., 2.5, 2.85, 3.2, 3.7, 4.2, 4.7],),    #   variable range
                         'xaxis' : '#eta 2nd jet',  #   x axis name
-                        'fold' :3
+                        'fold' :0
                         }
 
 # variables['eta_3j']  = {   'name': 'CleanJet_eta[2]',            #   variable name    

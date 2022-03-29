@@ -28,7 +28,7 @@ except NameError:
 from LatinoAnalysis.Tools.HiggsXSection import HiggsXSection
 HiggsXS = HiggsXSection()
 
-osww = ['OSWW_5ops', 'OSWW_cqq3_LI', 'OSWW_cqq3_QU', 'OSWW_cqq31_LI', 'OSWW_cqq31_QU', 'OSWW_cHl3_LI', 'OSWW_cHl3_QU', 'OSWW_cHq3_LI', 'OSWW_cHq3_QU', 'OSWW_cll1_LI', 'OSWW_cll1_QU']
+osww = ['sm_private', 'OSWW_5ops', 'lin_cqq3', 'quad_cqq3', 'lin_cqq31', 'quad_cqq31', 'lin_cHl3', 'quad_cHl3', 'lin_cHq3', 'quad_cHq3', 'lin_cll1', 'quad_cll1']
 cuts0j = []
 cuts1j = []
 cuts2j = []

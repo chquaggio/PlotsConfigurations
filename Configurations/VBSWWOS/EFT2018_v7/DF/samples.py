@@ -230,9 +230,6 @@ samples['sm'] = {
     'FilesPerJob': 4
 }
 
-signals = []
-signals.append('sm')
-
 # k-factor 1.4 already taken into account in XSWeight
 files = nanoGetSampleFiles(mcDirectory, 'GluGluToWWToENEN') + \
     nanoGetSampleFiles(mcDirectory, 'GluGluToWWToENMN') + \
@@ -431,15 +428,21 @@ samples['OSWW_5ops'] = {
     'FilesPerJob': 1
 }
 
+samples['sm_private'] = {
+    'name': files,
+    'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_sm',    # factor for cross section normalization
+    'FilesPerJob': 1
+}
+
 #--------------------cqq3--------------------
 
-samples['OSWW_cqq3_LI'] = {
+samples['lin_cqq3'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cqq3_LI',    # factor for cross section normalization
     'FilesPerJob': 1
 }
 
-samples['OSWW_cqq3_QU'] = {
+samples['quad_cqq3'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cqq3_QU',    # factor for cross section normalization
     'FilesPerJob': 1
@@ -447,13 +450,13 @@ samples['OSWW_cqq3_QU'] = {
 
 #--------------------cqq31--------------------
 
-samples['OSWW_cqq31_LI'] = {
+samples['lin_cqq31'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cqq31_LI',    # factor for cross section normalization
     'FilesPerJob': 1
 }
 
-samples['OSWW_cqq31_QU'] = {
+samples['quad_cqq31'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cqq31_QU',    # factor for cross section normalization
     'FilesPerJob': 1
@@ -461,13 +464,13 @@ samples['OSWW_cqq31_QU'] = {
 
 #--------------------cHl3--------------------
 
-samples['OSWW_cHl3_LI'] = {
+samples['lin_cHl3'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cHl3_LI',    # factor for cross section normalization
     'FilesPerJob': 1
 }
 
-samples['OSWW_cHl3_QU'] = {
+samples['quad_cHl3'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cHl3_QU',    # factor for cross section normalization
     'FilesPerJob': 1
@@ -475,13 +478,13 @@ samples['OSWW_cHl3_QU'] = {
 
 #--------------------cHq3--------------------
 
-samples['OSWW_cHq3_LI'] = {
+samples['lin_cHq3'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cHq3_LI',    # factor for cross section normalization
     'FilesPerJob': 1
 }
 
-samples['OSWW_cHq3_QU'] = {
+samples['quad_cHq3'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cHq3_QU',    # factor for cross section normalization
     'FilesPerJob': 1
@@ -489,13 +492,13 @@ samples['OSWW_cHq3_QU'] = {
 
 #--------------------cll1--------------------
 
-samples['OSWW_cll1_LI'] = {
+samples['lin_cll1'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cll1_LI',    # factor for cross section normalization
     'FilesPerJob': 1
 }
 
-samples['OSWW_cll1_QU'] = {
+samples['quad_cll1'] = {
     'name': files,
     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_cll1_QU',    # factor for cross section normalization
     'FilesPerJob': 1
