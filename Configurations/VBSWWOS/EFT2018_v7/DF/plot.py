@@ -19,7 +19,7 @@ groupPlot['Higgs']  = {
                   'nameHR' : 'Higgs',
                   'isSignal' : 0,
                   'color': 632, # kRed 
-		  'samples'  : ['H_htt', 'H_hww', 'ZH_hww', 'ggZH_hww', 'WH_hww', 'qqH_hww', 'ggH_hww','bbH_hww','ttH_hww','ZH_htt', 'ggZH_htt', 'WH_htt', 'qqH_htt', 'ggH_htt','bbH_htt','ttH_htt' ]
+		  'samples'  : ['H_htt', 'H_hww', 'ZH_hww', 'ggZH_hww', 'WH_hww', 'qqH_hww', 'bbH_hww', 'ggH_hww','ttH_hww','ZH_htt', 'ggZH_htt', 'WH_htt', 'qqH_htt', 'ggH_htt','bbH_htt','ttH_htt' ]
 		  #'samples'  : ['H_htt', 'H_hww', 'ZH_hww', 'ggZH_hww', 'WH_hww', 'qqH_hww', 'ggH_hww','bbH_hww','ttH_hww', 'qqH_htt', 'ggH_htt' ]
               }
 
@@ -37,26 +37,19 @@ groupPlot['Multiboson']  = {
                   'samples'  : ['VVV', 'VZ', 'WZ', 'ZZ', 'Vg', 'Wg', 'VgS_H', 'VgS_L']
               }
 
-groupPlot['VBS_SM']  = {
-                  'nameHR' : 'VBS_SM',
-                  'isSignal' : 0,
-                  'color': 888, #666,
-                  'samples'  : ['WWewk']
-              }
-
-groupPlot['WW']  = {  
-                  'nameHR' : 'WW',
-                  'isSignal' : 0,
-                  'color': 851, # kAzure -9 
-                  'samples'  : ['WW', 'ggWW']
-              }
-
 groupPlot['Fake']  = {
                   'nameHR' : 'nonprompt',
                   'isSignal' : 0,
                   'color': 921,    # kGray + 1
                   'samples'  : ['Fake_m', 'Fake_e']
 }
+
+groupPlot['WW']  = {  
+                  'nameHR' : 'WW QCD',
+                  'isSignal' : 0,
+                  'color': 851, # kAzure -9 
+                  'samples'  : ['WW', 'ggWW']
+              }
 
 groupPlot['top']  = {  
                   'nameHR' : 'tW and t#bar{t}',
@@ -65,7 +58,12 @@ groupPlot['top']  = {
                   'samples'  : ['top']
               }
 
-
+groupPlot['VBS_SM']  = {
+                  'nameHR' : 'OSWW SM',
+                  'isSignal' : 0,
+                  'color': 4, #666,
+                  'samples'  : ['sm']
+              }
 # groupPlot['OSWW_cqq31'] = {
 #                   'nameHR' : 'OSWW_cqq31',
 #                   'color': 1, # kBlack
@@ -80,6 +78,55 @@ groupPlot['top']  = {
 #                   'samples'   : ['lin_cqq3', 'quad_cqq3']
 #                   }
 
+# groupPlot['OSWW_cqq11'] = {
+#                   'nameHR' : 'OSWW_cqq31',
+#                   'color': 1, # kBlack
+#                   'isSignal' : 2,
+#                   'samples'   : ['lin_cqq11', 'quad_cqq11']
+#                   }
+
+# groupPlot['OSWW_cqq1'] = {
+#                   'nameHR' : 'OSWW SM+cqq1[k=1]',
+#                   'color': 1, # kBlue
+#                   'isSignal' : 0,
+#                   'samples'   : ['sm', 'lin_cqq1', 'quad_cqq1']
+#                   }                  
+
+groupPlot['OSWW_cW'] = {
+                  'nameHR' : 'OSWW SM+cW=1',
+                  'color': 1, # kBlue
+                  'isSignal' : 0,
+                  'samples'   : ['sm', 'lin_cW', 'quad_cW']
+                  }    
+
+# groupPlot['OSWW_cHWB'] = {
+#                   'nameHR' : 'OSWW_cHWB',
+#                   'color': 1, # kBlue
+#                   'isSignal' : 2,
+#                   'samples'   : ['lin_cHWB', 'quad_cHWB']
+#                   }   
+
+# groupPlot['OSWW_cHDD'] = {
+#                   'nameHR' : 'OSWW_cHDD',
+#                   'color': 1, # kBlue
+#                   'isSignal' : 2,
+#                   'samples'   : ['lin_cHDD', 'quad_cHDD']
+#                   }  
+
+# groupPlot['OSWW_cHbox'] = {
+#                   'nameHR' : 'OSWW SM+cHbox[k=1]',
+#                   'color': 1, # kBlue
+#                   'isSignal' : 2,
+#                   'samples'   : ['lin_cHbox', 'quad_cHbox']
+#                   }  
+
+# groupPlot['OSWW_cHq1'] = {
+#                   'nameHR' : 'OSWW_cHq1',
+#                   'color': 1, # kBlue
+#                   'isSignal' : 2,
+#                   'samples'   : ['lin_cHq1', 'quad_cHq1']
+#                   }  
+
 # groupPlot['OSWW_cll1'] = {
 #                   'nameHR' : 'OSWW_cll1',
 #                   'color': 1, # kOrange+9
@@ -87,19 +134,19 @@ groupPlot['top']  = {
 #                   'samples'   : ['lin_cll1', 'quad_cll1']
 #                   }
 
-# groupPlot['OSWW_cHl3'] = {
-#                   'nameHR' : 'OSWW_cHl3',
+# groupPlot['OSWW_cHq3'] = {
+#                   'nameHR' : 'OSWW SM+cHq3[k=1]',
 #                   'color': 1, # kPink+4
-#                   'isSignal' : 2,
-#                   'samples'   : ['lin_cHl3', 'quad_cHl3']
+#                   'isSignal' : 0,
+#                   'samples'   : ['sm', 'lin_cHq3', 'quad_cHq3']
 #                   }
 
-groupPlot['OSWW_cHq3'] = {
-                  'nameHR' : 'OSWW_cHq3',
-                  'color': 1, # kRed+2
-                  'isSignal' : 2,
-                  'samples'   : ['lin_cHq3', 'quad_cHq3']
-                  }
+# groupPlot['OSWW_cHq3'] = {
+#                   'nameHR' : 'OSWW_cHq3',
+#                   'color': 1, # kRed+2
+#                   'isSignal' : 2,
+#                   'samples'   : ['lin_cHq3', 'quad_cHq3']
+#                   }
 
 #plot = {}
 
@@ -136,7 +183,7 @@ plot['Zjj']  = {
                   'scale'    : 1.0                  
               }
 
-plot['sm']  = {
+plot['WWewk']  = {
                   'nameHR' : 'WWewk',
                   'color': 851, # kAzure -9 
                   'isSignal' : 0,
@@ -361,84 +408,47 @@ plot['ttH_hww'] = {
                   'scale'    : 1    #
                   }
 
-plot['lin_cll1'] = {
-                  'nameHR' : 'lin_cll1',
-                  'color': 600, # kRed+6
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                #   'scale'    : 1    #
-                  }
-
-plot['quad_cll1'] = {
-                  'nameHR' : 'quad_cll1',
-                  'color': 600, # kRed+6
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                #   'scale'    : 1    #
-                  }                  
-
-plot['lin_cHq3'] = {
-                  'nameHR' : 'lin_cHq3',
-                  'color': 600, # kRed+6
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                #   'scale'    : 1    #
-                  }
-
-plot['quad_cHq3'] = {
-                  'nameHR' : 'quad_cHq3',
-                  'color': 600, # kRed+6
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                #   'scale'    : 1    #
-                  }
-
-plot['lin_cHl3'] = {
-                  'nameHR' : 'lin_cHl3',
-                  'color': 600, # kRed+6
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  'scale'    : -1    #
-                  }
-
-plot['quad_cHl3'] = {
-                  'nameHR' : 'quad_cHl3',
-                  'color': 632, # kRed+6
+plot['sm'] = {
+                  'nameHR' : 'WWewk',
+                  'color': 632+6, # kRed+6
                   'isSignal' : 1,
                   'isData'   : 0,
                   'scale'    : 1    #
                   }
+osww_15ops = ['lin_cW', 'quad_cW', 'lin_cHW', 'quad_cHW', 'lin_cHWB', 'quad_cHWB', 'lin_cHbox', 'quad_cHbox', 'lin_cHDD', 'quad_cHDD', 'lin_cHl1', 'quad_cHl1', 'lin_cHl3', 'quad_cHl3', 'lin_cHq1', 'quad_cHq1', 'lin_cHq3', 'quad_cHq3', 'lin_cll', 'quad_cll', 'lin_cll1', 'quad_cll1', 'lin_cqq1', 'quad_cqq1', 'lin_cqq31', 'quad_cqq31', 'lin_cqq11', 'quad_cqq11', 'lin_cqq3', 'quad_cqq3']
 
-plot['lin_cqq31'] = {
-                  'nameHR' : 'lin_cqq31',
-                  'color': 632, # kRed+6
+# for op in osww_15ops:
+#     if 'lin' in op:
+#         plot[op] = {
+#                   'nameHR' : op,
+#                   'color': 600, # kRed+6
+#                   'isSignal' : 1,
+#                   'isData'   : 0,
+#                   'scale'    : 1
+#                   }
+#     else:
+#         plot[op] = {
+#                   'nameHR' : op,
+#                   'color': 600, # kRed+6
+#                   'isSignal' : 1,
+#                   'isData'   : 0,
+#                   'scale'    : 1
+#                   }
+
+plot['lin_cW'] = {
+                  'nameHR' : 'lin_cW',
+                  'color': 632+6, # kRed+6
                   'isSignal' : 1,
                   'isData'   : 0,
-                #   'scale'    : 1    #
+                #   'scale'    : 5    #
                   }
 
-plot['quad_cqq31'] = {
-                  'nameHR' : 'quad_cqq31',
-                  'color': 638, # kRed+6
+plot['quad_cW'] = {
+                  'nameHR' : 'quad_cW',
+                  'color': 632+6, # kRed+6
                   'isSignal' : 1,
                   'isData'   : 0,
-                #   'scale'    : 1    #
-                  }
-
-plot['lin_cqq3'] = {
-                  'nameHR' : 'lin_cqq3',
-                  'color': 632, # kRed+6
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                #   'scale'    : 1    #
-                  }
-
-plot['quad_cqq3'] = {
-                  'nameHR' : 'quad_cqq3',
-                  'color': 638, # kRed+6
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                #   'scale'    : 1    #
+                #   'scale'    : 5    #
                   }
 
 # data

@@ -24,6 +24,7 @@ structure['DY']  = {
                   'isSignal' : 0,
                   'isData'   : 0
               }
+
 structure['Dyemb']  = {
                   'isSignal' : 0,
                   'isData'   : 0
@@ -79,10 +80,10 @@ structure['WW']  = {
                   'isData'   : 0    
                   }
 
-# structure['WWewk']  = {
-#                   'isSignal' : 0,
-#                   'isData'   : 0
-#                   }
+structure['WWewk']  = {
+                  'isSignal' : 0,
+                  'isData'   : 0
+                  }
 
 structure['ggWW']  = {
                   'isSignal' : 0,
@@ -220,70 +221,33 @@ structure['H_htt'] = {
 #------------------EFT------------------
 #---------------------------------------
 
-structure['OSWW_5ops'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
+# structure['OSWW_5ops'] = {
+#                   'isSignal' : 1,
+#                   'isData'   : 0    
+#                   }
+                  
+# structure['OSWW_15ops'] = {
+#                   'isSignal' : 1,
+#                   'isData'   : 0    
+#                   }
 
 structure['sm'] = {
-                  'isSignal' : 1,
+                  'isSignal' : 0,
                   'isData'   : 0    
                   }
 
-structure['sm_private'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
+# structure['sm_private'] = {
+#                   'isSignal' : 1,
+#                   'isData'   : 0    
+#                   }
+osww_15ops = ['lin_cW', 'quad_cW', 'lin_cHW', 'quad_cHW', 'lin_cHWB', 'quad_cHWB', 'lin_cHbox', 'quad_cHbox', 'lin_cHDD', 'quad_cHDD', 'lin_cHl1', 'quad_cHl1', 'lin_cHl3', 'quad_cHl3', 'lin_cHq1', 'quad_cHq1', 'lin_cHq3', 'quad_cHq3', 'lin_cll', 'quad_cll', 'lin_cll1', 'quad_cll1', 'lin_cqq1', 'quad_cqq1', 'lin_cqq31', 'quad_cqq31', 'lin_cqq11', 'quad_cqq11', 'lin_cqq3', 'quad_cqq3']
 
-structure['lin_cqq31'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
+for op in osww_15ops:
+    structure[op] = {
+        'isSignal' : 1,
+        'isData'   : 0   
+    }
 
-structure['quad_cqq31'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['lin_cqq3'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['quad_cqq3'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['lin_cHq3'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['quad_cHq3'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['lin_cHl3'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['quad_cHl3'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['lin_cll1'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['quad_cll1'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
 # data
 
 

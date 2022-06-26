@@ -279,21 +279,44 @@ samples['WWewk'] = {
 #EFT directory location
 EftDirectory = '/eos/user/c/cquaggio/nAOD/PostProc/Autumn18_102X_nAODv7_Full2018v7/MCl1loose2018v7__MCCorr2018v7__l2loose__l2tightOR2018v7'
 
-# Linear interference term
+# # Linear interference term
 
-samples['cW_linear'] = {
-    'name': nanoGetSampleFiles(EftDirectory, 'OSWW_cW_LI'),
-    'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)',    # factor for cross section normalization 
-    'FilesPerJob': 10
+# samples['cW_linear'] = {
+#     'name': nanoGetSampleFiles(EftDirectory, 'OSWW_cW_LI'),
+#     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)',    # factor for cross section normalization 
+#     'FilesPerJob': 10
+# }
+
+# # Quadratic term
+
+# samples['cW_quadratic'] = {
+#     'name': nanoGetSampleFiles(EftDirectory, 'OSWW_cW_QU'),
+#     'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)',    # factor for cross section normalization 
+#     'FilesPerJob': 10
+# }
+
+files = nanoGetSampleFiles(EftDirectory, 'OSWW_EFTdim6')
+
+osww_15ops = ['lin_cW', 'quad_cW', 'lin_cHW', 'quad_cHW', 'lin_cHWB', 'quad_cHWB', 'lin_cHbox', 'quad_cHbox', 'lin_cHDD', 'quad_cHDD', 'lin_cHl1', 'quad_cHl1', 'lin_cHl3', 'quad_cHl3', 'lin_cHq1', 'quad_cHq1', 'lin_cHq3', 'quad_cHq3', 'lin_cll', 'quad_cll', 'lin_cll1', 'quad_cll1', 'lin_cqq1', 'quad_cqq1', 'lin_cqq31', 'quad_cqq31', 'lin_cqq11', 'quad_cqq11', 'lin_cqq3', 'quad_cqq3']
+
+samples['OSWW_15ops'] = {
+    'name': files,
+    'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)',    # factor for cross section normalization
+    'FilesPerJob': 1
 }
 
-# Quadratic term
-
-samples['cW_quadratic'] = {
-    'name': nanoGetSampleFiles(EftDirectory, 'OSWW_cW_QU'),
-    'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)',    # factor for cross section normalization 
-    'FilesPerJob': 10
+samples['sm'] = {
+    'name': files,
+    'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*LHEReweightingWeight[0]',    # factor for cross section normalization
+    'FilesPerJob': 3
 }
+
+for op in osww_15ops:
+    samples[op] = {
+    'name': files,
+    'weight': mcCommonWeight+'*(Sum$(abs(GenPart_pdgId)==6 || GenPart_pdgId==25)==0)*rwgt_'+op,    # factor for cross section normalization
+    'FilesPerJob': 1
+    }
 ###########################################
 ################## FAKE ###################
 ###########################################

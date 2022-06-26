@@ -20,7 +20,7 @@ folderpath =  os.path.dirname(folderpath)
 mc = [skey for skey in samples if skey not in ('Fake', 'DATA', 'Dyemb')]
 mc_emb = [skey for skey in samples if skey not in ('Fake', 'DATA')]
 btag_algo="deepflav"#deepcsv
-osww = ['sm', 'OSWW_5ops', 'lin_cqq3', 'quad_cqq3', 'lin_cqq31', 'quad_cqq31', 'lin_cHl3', 'quad_cHl3', 'lin_cHq3', 'quad_cHq3', 'lin_cll1', 'quad_cll1', 'sm_private']
+osww = ['lin_cHl3', 'quad_cHl3', 'lin_cHq3', 'quad_cHq3', 'lin_cqq31', 'quad_cqq31', 'lin_cqq3', 'quad_cqq3', 'lin_cll1', 'quad_cll1']
 
 
 
@@ -239,60 +239,35 @@ aliases['nCleanGenJet'] = {
 #################################
 #################################
 
-aliases['rwgt_sm'] = {
-    'expr' : 'LHEReweightingWeight[0]',
-    'samples' : osww
-}
+c = 2
+for op in osww:
+    if 'lin' in op:
+        aliases['rwgt_' + op] = {
+        'expr' : '0.5*(LHEReweightingWeight['+str(c)+'] - LHEReweightingWeight['+str(c-1)+'])',
+        'samples' : osww
+        }
+    else:
+        aliases['rwgt_' + op] = {
+        'expr' : '0.5*(LHEReweightingWeight['+str(c)+'] + LHEReweightingWeight['+str(c-1)+'] - 2*LHEReweightingWeight[0])',
+        'samples' : osww
+        }
+        c += 2
 
-aliases['rwgt_cHl3_LI'] = {
-    'expr' : '0.5*(LHEReweightingWeight[2] - LHEReweightingWeight[1])',
-    'samples' : osww
-}
+osww_15ops = ['lin_cW', 'quad_cW', 'lin_cHW', 'quad_cHW', 'lin_cHWB', 'quad_cHWB', 'lin_cHbox', 'quad_cHbox', 'lin_cHDD', 'quad_cHDD', 'lin_cHl1', 'quad_cHl1', 'lin_cHl3', 'quad_cHl3', 'lin_cHq1', 'quad_cHq1', 'lin_cHq3', 'quad_cHq3', 'lin_cll', 'quad_cll', 'lin_cll1', 'quad_cll1', 'lin_cqq1', 'quad_cqq1', 'lin_cqq31', 'quad_cqq31', 'lin_cqq11', 'quad_cqq11', 'lin_cqq3', 'quad_cqq3']
 
-aliases['rwgt_cHl3_QU'] = {
-    'expr' : '0.5*(LHEReweightingWeight[2] + LHEReweightingWeight[1] - 2*LHEReweightingWeight[0])',
-    'samples' : osww
-}
-
-aliases['rwgt_cHq3_LI'] = {
-    'expr' : '0.5*(LHEReweightingWeight[4] - LHEReweightingWeight[3])',
-    'samples' : osww
-}
-
-aliases['rwgt_cHq3_QU'] = {
-    'expr' : '0.5*(LHEReweightingWeight[4] + LHEReweightingWeight[3] - 2*LHEReweightingWeight[0])',
-    'samples' : osww
-}
-
-aliases['rwgt_cqq31_LI'] = {
-    'expr' : '0.5*(LHEReweightingWeight[6] - LHEReweightingWeight[5])',
-    'samples' : osww
-}
-
-aliases['rwgt_cqq31_QU'] = {
-    'expr' : '0.5*(LHEReweightingWeight[6] + LHEReweightingWeight[5] - 2*LHEReweightingWeight[0])',
-    'samples' : osww
-}
-
-aliases['rwgt_cqq3_LI'] = {
-    'expr' : '0.5*(LHEReweightingWeight[8] - LHEReweightingWeight[7])',
-    'samples' : osww
-}
-
-aliases['rwgt_cqq3_QU'] = {
-    'expr' : '0.5*(LHEReweightingWeight[8] + LHEReweightingWeight[7] - 2*LHEReweightingWeight[0])',
-    'samples' : osww
-}
-
-aliases['rwgt_cll1_LI'] = {
-    'expr' : '0.5*(LHEReweightingWeight[10] - LHEReweightingWeight[9])',
-    'samples' : osww
-}
-
-aliases['rwgt_cll1_QU'] = {
-    'expr' : '0.5*(LHEReweightingWeight[10] + LHEReweightingWeight[9] - 2*LHEReweightingWeight[0])',
-    'samples' : osww
-}
+c = 2
+for op in osww_15ops:
+    if 'lin' in op:
+        aliases['rwgt_' + op] = {
+        'expr' : '0.5*(LHEReweightingWeight['+str(c)+'] - LHEReweightingWeight['+str(c-1)+'])',
+        'samples' : osww_15ops
+        }
+    else:
+        aliases['rwgt_' + op] = {
+        'expr' : '0.5*(LHEReweightingWeight['+str(c)+'] + LHEReweightingWeight['+str(c-1)+'] - 2*LHEReweightingWeight[0])',
+        'samples' : osww_15ops
+        }
+        c += 2
 
 ##### DY Z pT reweighting
 aliases['getGenZpt_OTF'] = {

@@ -21,13 +21,6 @@ cuts['VBS'] = {
     }
 }    
 
-# cuts['VBS'] = {
-#    'expr': 'sr',
-#    'categories' : {
-#       '2j_em_me'   : 'bVeto', 
-#     }
-# }
-
 # Top control region
 cuts['top']  = {
    'expr': 'topcr',

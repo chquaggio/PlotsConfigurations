@@ -31,6 +31,8 @@ HiggsXS = HiggsXSection()
 cuts0j = []
 cuts1j = []
 cuts2j = []
+osww = ['OSWW_5ops', 'OSWW_15ops', 'sm', 'lin_cW', 'quad_cW', 'lin_cHW', 'quad_cHW', 'lin_cHWB', 'quad_cHWB', 'lin_cHbox', 'quad_cHbox', 'lin_cHDD', 'quad_cHDD', 'lin_cHl1', 'quad_cHl1', 'lin_cHl3', 'quad_cHl3', 'lin_cHq1', 'quad_cHq1', 'lin_cHq3', 'quad_cHq3', 'lin_cll', 'quad_cll', 'lin_cll1', 'quad_cll1', 'lin_cqq1', 'quad_cqq1', 'lin_cqq31', 'quad_cqq31', 'lin_cqq11', 'quad_cqq11', 'lin_cqq3', 'quad_cqq3']
+
 
 for k in cuts:
   for cat in cuts[k]['categories']:
@@ -165,7 +167,7 @@ nuisances['electronpt'] = {
     'type': 'shape',
     'mapUp': 'ElepTup',
     'mapDown': 'ElepTdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['cW_linear', 'cW_quadratic']),
+    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in osww),
     'folderUp': makeMCDirectory('ElepTup_suffix'),
     'folderDown': makeMCDirectory('ElepTdo_suffix'),
     'AsLnN': '1'
@@ -187,7 +189,7 @@ nuisances['muonpt'] = {
     'type': 'shape',
     'mapUp': 'MupTup',
     'mapDown': 'MupTdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['cW_linear', 'cW_quadratic']),
+    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in osww),
     'folderUp': makeMCDirectory('MupTup_suffix'),
     'folderDown': makeMCDirectory('MupTdo_suffix'),
     'AsLnN': '1'
@@ -222,7 +224,7 @@ for js in jes_systs:
       'type': 'shape',
       'mapUp': js+'up',
       'mapDown': js+'do',
-      'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['VZ', 'Vg', 'VgS', 'cW_linear', 'cW_quadratic']),
+      'samples': dict((skey, ['1', '1']) for skey in mc if skey not in (['VZ', 'Vg', 'VgS']+osww)),
       'folderUp': folderup,
       'folderDown': folderdo,
       'AsLnN': '1'
@@ -236,7 +238,7 @@ nuisances['JER'] = {
     'type': 'shape',
     'mapUp': 'JERup',
     'mapDown': 'JERdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['VZ', 'Vg', 'VgS', 'cW_linear', 'cW_quadratic']),
+    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in (['VZ', 'Vg', 'VgS']+osww)),
     'folderUp': makeMCDirectory('JERup_suffix'),
     'folderDown': makeMCDirectory('JERdo_suffix'),
     'AsLnN': '1'
@@ -250,7 +252,7 @@ nuisances['met'] = {
     'type': 'shape',
     'mapUp': 'METup',
     'mapDown': 'METdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in ['cW_linear', 'cW_quadratic']),
+    'samples': dict((skey, ['1', '1']) for skey in mc if skey not in osww),
     'folderUp': makeMCDirectory('METup_suffix'),
     'folderDown': makeMCDirectory('METdo_suffix'),
     'AsLnN': '1'

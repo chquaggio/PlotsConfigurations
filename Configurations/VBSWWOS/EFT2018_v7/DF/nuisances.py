@@ -28,10 +28,12 @@ except NameError:
 from LatinoAnalysis.Tools.HiggsXSection import HiggsXSection
 HiggsXS = HiggsXSection()
 
-osww = ['sm_private', 'OSWW_5ops', 'lin_cqq3', 'quad_cqq3', 'lin_cqq31', 'quad_cqq31', 'lin_cHl3', 'quad_cHl3', 'lin_cHq3', 'quad_cHq3', 'lin_cll1', 'quad_cll1']
+osww = ['OSWW_15ops', 'sm',  'lin_cW', 'quad_cW', 'lin_cHW', 'quad_cHW', 'lin_cHWB', 'quad_cHWB', 'lin_cHbox', 'quad_cHbox', 'lin_cHDD', 'quad_cHDD', 'lin_cHl1', 'quad_cHl1', 'lin_cHl3', 'quad_cHl3', 'lin_cHq1', 'quad_cHq1', 'lin_cHq3', 'quad_cHq3', 'lin_cll', 'quad_cll', 'lin_cll1', 'quad_cll1', 'lin_cqq1', 'quad_cqq1', 'lin_cqq31', 'quad_cqq31', 'lin_cqq11', 'quad_cqq11', 'lin_cqq3', 'quad_cqq3']
 cuts0j = []
 cuts1j = []
 cuts2j = []
+
+MCDir = "/eos/user/c/cquaggio/nAOD/PostProc/Autumn18_102X_nAODv7_Full2018v7/MCl1loose2018v7__MCCorr2018v7__l2loose__l2tightOR2018v7__"
 
 for k in cuts:
   for cat in cuts[k]['categories']:
@@ -178,6 +180,18 @@ nuisances['electronpt'] = {
     'AsLnN': '1'
 }
 
+nuisances['electronpt_pvt'] = {
+    'name': 'CMS_scale_e_2018_pvt',
+    'kind': 'suffix',
+    'type': 'shape',
+    'mapUp': 'ElepTup',
+    'mapDown': 'ElepTdo',
+    'samples': dict((skey, ['1', '1']) for skey in osww),
+    'folderUp': MCDir + "ElepTup_suffix",
+    'folderDown': MCDir + "ElepTdo_suffix",
+    'AsLnN': '1'
+}
+
 if useEmbeddedDY:
   nuisances['electronpt_emb'] = {
     'name': 'CMS_scale_e_2018',
@@ -210,6 +224,18 @@ nuisances['muonpt'] = {
     'samples': dict((skey, ['1', '1']) for skey in mc if skey not in osww),
     'folderUp': makeMCDirectory('MupTup_suffix'),
     'folderDown': makeMCDirectory('MupTdo_suffix'),
+    'AsLnN': '1'
+}
+
+nuisances['muonpt_pvt'] = {
+    'name': 'CMS_scale_m_2018_pvt',
+    'kind': 'suffix',
+    'type': 'shape',
+    'mapUp': 'MupTup',
+    'mapDown': 'MupTdo',
+    'samples': dict((skey, ['1', '1']) for skey in osww),
+    'folderUp': MCDir + "MupTup_suffix",
+    'folderDown': MCDir + "MupTdo_suffix",
     'AsLnN': '1'
 }
 
@@ -274,6 +300,18 @@ nuisances['JER'] = {
     'AsLnN': '1'
 }
 
+nuisances['JER_pvt'] = {
+    'name': 'CMS_res_j_2017_pvt',
+    'kind': 'suffix',
+    'type': 'shape',
+    'mapUp': 'JERup',
+    'mapDown': 'JERdo',
+    'samples': dict((skey, ['1', '1']) for skey in osww),
+    'folderUp': MCDir + "JERup_suffix",
+    'folderDown': MCDir + "JERdo_suffix",
+    'AsLnN': '1'
+}
+
 ##### MET energy scale
 
 nuisances['met'] = {
@@ -285,6 +323,18 @@ nuisances['met'] = {
     'samples': dict((skey, ['1', '1']) for skey in mc if skey not in osww),
     'folderUp': makeMCDirectory('METup_suffix'),
     'folderDown': makeMCDirectory('METdo_suffix'),
+    'AsLnN': '1'
+}
+
+nuisances['met_pvt'] = {
+    'name': 'CMS_scale_met_2018_pvt',
+    'kind': 'suffix',
+    'type': 'shape',
+    'mapUp': 'METup',
+    'mapDown': 'METdo',
+    'samples': dict((skey, ['1', '1']) for skey in osww),
+    'folderUp': MCDir + "METup_suffix",
+    'folderDown': MCDir + "METdo_suffix",
     'AsLnN': '1'
 }
 
@@ -375,14 +425,14 @@ nuisances['PS_ISR']  = {
     'name': 'PS_ISR',
     'kind': 'weight',
     'type': 'shape',
-    'samples': dict((skey, ['PSWeight[2]', 'PSWeight[0]']) for skey in mc if skey not in ['Vg','VgS','sm']), #PSWeights are buggy for some samples, we add them back by hand below
+    'samples': dict((skey, ['PSWeight[2]', 'PSWeight[0]']) for skey in mc if skey not in ['Vg','VgS']), #PSWeights are buggy for some samples, we add them back by hand below
 }
 
 nuisances['PS_FSR']  = {
     'name': 'PS_FSR',
     'kind': 'weight',
     'type': 'shape',
-    'samples': dict((skey, ['PSWeight[3]', 'PSWeight[1]']) for skey in mc if skey not in ['Vg','VgS','sm']), #PSWeights are buggy for some samples, we add them back by hand below
+    'samples': dict((skey, ['PSWeight[3]', 'PSWeight[1]']) for skey in mc if skey not in ['Vg','VgS']), #PSWeights are buggy for some samples, we add them back by hand below
 }
 
 ## PS nuisances computed by hand as a function of nCleanGenJets using alternative samples (when available). Needed if nominal samples have buggy PSWeights

@@ -163,12 +163,11 @@ aliases['DiffFlav'] = {
 # CR definitions
 
 aliases['topcr'] = {
-    #'expr': 'mtw2>30 && mll>50 && ((zeroJet && !bVeto) || bReq)'
-    'expr': 'mll>50 && ((zeroJet && !bVeto) || bReq)'
+    'expr': '(zeroJet && !bVeto) || bReq'
 }
 
 aliases['dycr'] = {
-    'expr': 'mth<60 && bVeto'
+    'expr' : 'mth < 60 && bVeto && mll < 80'
 }
 
 aliases['wwcr'] = {
@@ -180,6 +179,18 @@ aliases['wwcr'] = {
 aliases['sr'] = {
     #'expr': 'mth>60 && mtw2>30 && bVeto'
     'expr': 'mth>60 && bVeto'
+}
+
+aliases['Zeppll_al'] = {
+    'expr' : '0.5*TMath::Abs((Alt$(Lepton_eta[0],-9999.)+Alt$(Lepton_eta[1],-9999.))-(Alt$(CleanJet_eta[0],-9999.)+Alt$(CleanJet_eta[1],-9999.)))'
+}
+
+aliases['Zepp1_al'] = {
+    'expr' : 'Alt$(Lepton_eta[0],-9999.)-0.5*(Alt$(CleanJet_eta[0],-9999.)+Alt$(CleanJet_eta[1],-9999.))'
+}
+
+aliases['Zepp2_al'] = {
+    'expr' : 'Alt$(Lepton_eta[1],-9999.)-0.5*(Alt$(CleanJet_eta[0],-9999.)+Alt$(CleanJet_eta[1],-9999.))'
 }
 
 aliases['lowZ'] = {

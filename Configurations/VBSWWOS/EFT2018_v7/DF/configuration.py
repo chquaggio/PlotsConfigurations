@@ -2,7 +2,7 @@
 
 treeName = 'Events'
 
-tag = 'OSWWEFT_2018_DF'
+tag = 'OSWWEFT_2018_DF_cW_thesis_fin'
 
 # used by mkShape to define output directory for root files
 outputDir = 'rootFiles_'+ tag
@@ -17,10 +17,10 @@ variablesFile = 'variables.py'
 cutsFile = 'cuts.py' 
 
 # file with list of samples
-samplesFile = 'samplesEFT.py' 
+samplesFile = 'samples.py' 
 
 # file with list of samples
-plotFile = 'plotEFT.py' 
+plotFile = 'plot.py' 
 
 # luminosity to normalize to (in 1/fb)
 lumi = 59.74
